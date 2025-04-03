@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Coil Calculator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Team UpVolts - TESLA COIL</h1>
+    </div>
+    <!-- Video Section -->
+    <div class="video-container">
+        <video controls>
+            <source src="{{ url_for('static', filename='tesla_simulation.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Calculator Section -->
+    <div class="container">
+        <div class="card">
+            <h1>Tesla Coil Calculator</h1>
+            <form method="POST">
+                <label>Input Voltage (V):</label>
+                <input type="number" step="0.1" name="input_voltage" required>
+
+                <label>Transistor Type:</label>
+                <select name="transistor_type" required>
+                    <option value="BJT">BJT</option>
+                    <option value="FET">FET</option>
+                </select>
+
+                <label>Conductor Type:</label>
+                <select name="conductor_type" required>
+                    <option value="copper wire 12 gauge">Copper Wire 12 Gauge</option>
+                    <option value="copper wire 14 gauge">Copper Wire 14 Gauge</option>
+                    <option value="copper wire 16 gauge">Copper Wire 16 Gauge</option>
+                    <option value="copper wire 20 gauge">Copper Wire 20 Gauge</option>
+                    <option value="copper wire 22 gauge">Copper Wire 22 Gauge</option>
+                    <option value="copper wire 24 gauge">Copper Wire 24 Gauge</option>
+                    <option value="copper wire 26 gauge">Copper Wire 26 Gauge</option>
+                    <option value="copper wire 30 gauge">Copper Wire 30 Gauge</option>
+                </select>
+
+                <label>Resistance (Ω):</label>
+                <input type="number" step="0.1" name="resistance" required>
+
+                <label>Number of Turns:</label>
+                <input type="number" name="num_turns" required>
+
+                <button type="submit">Calculate</button>
+            </form>
+            
+            {% if results %}
+                <div class="results">
+                    <h2>Results</h2>
+                    <p>Power Output: {{ results['power_output'] }} W</p>
+                    <p>Current Output: {{ results['current_output'] }} A</p>
+                    <p>Inductance: {{ results['inductance'] }} H</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+body {
+    background: url('/static/tesla_coil_background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+.heading {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #007bff;
+}
+
+.heading h1 {
+    font-size: 2.5em;
+    color: #00ffea;
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+video {
+    width: 80%;
+    border: 2px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select {
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.results {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #262626;
+    border-radius: 5px;
+}
